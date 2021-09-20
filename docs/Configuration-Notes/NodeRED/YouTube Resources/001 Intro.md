@@ -1,0 +1,1 @@
+The documents in this sub-folder contain NodeRED flows that are used in the corresponding YouTube tutorials for each topic title.  Whenever I use NodeRED to demonstrate something, it typically ends up becoming part of an endless clutter of nodes.  So, to start each tutorial with a clean slate, I export the flows for the previous tutorial and drop them here.
