@@ -1,9 +1,22 @@
-# Welcome to Our Home
+# The Griffith Home Automation Project
 
 !!! note
-    If you start reading something and you find that it's unfinished, slap me.  But seriously, it would help me if you let me know.  I have many things in my brain that I have trouble getting out and sometimes I get distr
+    If you see **DRAFT** at the top of a page, it means that the article is not yet complete.  
 
-Chateau de Bleep is our home.  It's a Bleep because it's constantly going through a process of automation using various Internet of Things devices, some of which go "bleep."  It's a Chateau because someone in 1973 decided it would be attractive to name a Hallcraft subdivision with a french name.  So, apparently I live in a [chateau](https://en.wikipedia.org/wiki/Ch%C3%A2teau).
+## Home Assistant
+Our drug of choice is Home Assistant.  You can read about it on the Home Assistant website.  The primary reason for this is the push for privacy in the culture of the Home Assistant community.  While it's possible to integrate your cloud based devices into your Home Assistant automation hub, being able to automate your house without being connected to the internet is the ultimate goal.  We don't need Google, or Amazon, or any other cloud service watching our every move all of the time.
+
+Of course, there are some compromises currently, but the goal is to eliminate the need for any cloud service that doesn't operate in the spirit of the Home Assistant community.
+
+## Automation is more than...
+Automation is more than being able to control devices from your tablet or phone.  In fact, too many devices sell based solely on the "cool" factor of being able to control it remotely.
+
+Here's the problem with that.  It's fluff.  I don't want to control my home's gadgets with my phone.  That requires handling a gadget.  The idea is to automate our home based upon our natural state of being in our home.  We want our home to learn our patterns and respond to them.  This is also the largest hurdle between semi-automation and full automation.  Machine learning is not something our home does yet.  But I'm sure that will come.
+
+For now, we try to identify what we want to happen _when_ and then create automation routines to closely mirror those conditions.
+
+## The Bones of our House
+We live in a 1973 Hallcraft townhome with 8' ceilings and a flat roof.  Designing automation systems that are functional but also fit our design style is a challenge.  We don't like wires, and we don't mess around with batteries.  So, where we can, we wire up permanent power to devices.  Where we can't...well, we make it so we can.
 
 ## Home Assistant
 
