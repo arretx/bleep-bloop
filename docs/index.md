@@ -4,14 +4,14 @@
     If you see **DRAFT** at the top of a page, it means that the article is not yet complete.  
 
 ## Home Assistant
-Our drug of choice is Home Assistant.  You can read about it on the Home Assistant website.  The primary reason for this is the push for privacy in the culture of the Home Assistant community.  While it's possible to integrate your cloud based devices into your Home Assistant automation hub, being able to automate your house without being connected to the internet is the ultimate goal.  We don't need Google, or Amazon, or any other cloud service watching our every move all of the time.
+We've chosen Home Assistant as our home automation hub.  You can read about it on the [Home Assistant website](https://home-assistant.io).  The reason for this is because we need privacy in a cloud-computing era, where our devices are held hostage by the requirements of the manufacturers that make them.  While it's possible to integrate your cloud based devices into your Home Assistant automation hub, being able to automate your house without being connected to the internet is the ultimate goal.  We don't need Google, or Amazon, or any other cloud service watching our every move all of the time, nor do we want to be held hostage by a third party manufacturer through planned obsolescense.
 
-Of course, there are some compromises currently, but the goal is to eliminate the need for any cloud service that doesn't operate in the spirit of the Home Assistant community.
+Of course, there are some compromises, currently, but the goal is to eliminate the need for any cloud service that doesn't operate in the spirit of the Home Assistant community.
 
 ## Automation is more than...
-Automation is more than being able to control devices from your tablet or phone.  In fact, too many devices sell based solely on the "cool" factor of being able to control it remotely.
+Automation is more than being able to control devices from your tablet or phone.  In fact, too many devices are sold solely on the "cool" factor of being able to control it remotely.
 
-Here's the problem with that.  It's fluff.  I don't want to control my home's gadgets with my phone.  That requires handling a gadget.  The idea is to automate our home based upon our natural state of being in our home.  We want our home to learn our patterns and respond to them.  This is also the largest hurdle between semi-automation and full automation.  Machine learning is not something our home does yet.  But I'm sure that will come.
+Here's the problem with that.  It's fluff.  I don't want to control my home's gadgets with my phone.  That requires handling a gadget.  The idea is to automate our home based upon our natural state of being. We want our home to learn our patterns and respond to them.  This is also the largest hurdle between semi-automation and full automation.  Machine learning is not something our home does yet.  But I'm sure that will come.
 
 For now, we try to identify what we want to happen _when_ and then create automation routines to closely mirror those conditions.
 

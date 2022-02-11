@@ -9,7 +9,7 @@ The [Monoprice 6-Zone Amplifier](https://www.monoprice.com/product?p_id=10761) c
   1. (Hardware) Speakers for amplified signals, or a mixer to receive line level output (great for supplementing a zone with a sub-woofer)
   1. (Hardware) A way to communicate with the Amplifier through RS-232.
     1. This means you either need a USB to RS232 cable and a direct connection to your Home Assistant host, or...
-    1. ...an [IP to RS-232 Network Converter](https://www.amazon.com/USR-TCP232-302-Serial-Ethernet-Converter-Support/dp/B01GPGPEBM) so you can connect directly to your network. (This is how I did it.)
+    1. ...an [IP to RS-232 Network Converter](https://www.amazon.com/USR-TCP232-306-Serial-Ethernet-Device-Server/dp/B07G5P4CPR) so you can connect directly to your network. (This is how I did it.)
   1. (Software) Home Assistant running on your network.
 
 
@@ -18,8 +18,8 @@ The [Monoprice 6-Zone Amplifier](https://www.monoprice.com/product?p_id=10761) c
   1. Monoprice 6-Zone Amp
   1. An officially supported version of Home Assistant running as a Virtual Machine in ProxmoxVE on a Gigabyte Mini computer.  The only hardware I have directly connected to my ProxmoxVE machine is a Zwave controller and an ethernet cable....and power.  Derp.
   1. A network switch, managed (a managed switch is not required but a switch is definitely required, of course if you're doing this and you don't know that, you have some homework to do about networking).  I have Ubiquiti Unifi ecosystem with UDMPro and Protect security cameras...etc.
-  1. A [USR-TCP232-306](https://www.amazon.com/USR-TCP232-302-Serial-Ethernet-Converter-Support/dp/B01GPGPEBM) IP to RS232 Network converter.
-  1. A [Male to Female DB9 serial cable](https://www.amazon.com/dp/B009WUQ828?psc=1&ref=ppx_yo2_dt_b_product_details).  MALE TO FEMALE...IMPORTANT.
+  1. A [USR-TCP232-306](https://www.amazon.com/USR-TCP232-306-Serial-Ethernet-Device-Server/dp/B07G5P4CPR) IP to RS232 Network converter.
+  1. A [Male to Female DB9 serial cable](https://www.amazon.com/dp/B009WUQ828?psc=1&ref=ppx_yo2_dt_b_product_details).  MALE TO FEMALE if you purchase this particular model.  There are other models that have a Female RS232 Connector which would require a male to male cable instead.
 
 ## Configuration Instructions
 
