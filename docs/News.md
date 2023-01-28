@@ -1,5 +1,3 @@
 # Blog
 
-## Date 1
-
-## Date 2
+One would think something would be here.  So far, there is nothing here.

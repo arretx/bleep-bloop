@@ -16,18 +16,23 @@ The [Monoprice 6-Zone Amplifier](https://www.monoprice.com/product?p_id=10761) c
 ## Hardware Specific to My Setup
 
   1. Monoprice 6-Zone Amp
-  1. An officially supported version of Home Assistant running as a Virtual Machine in ProxmoxVE on a Gigabyte Mini computer.  The only hardware I have directly connected to my ProxmoxVE machine is a Zwave controller and an ethernet cable....and power.  Derp.
+  1. An officially supported version of Home Assistant running as a Virtual Machine on your preferred system.  I'm running mine as a VM on my Unraid system.
   1. A network switch, managed (a managed switch is not required but a switch is definitely required, of course if you're doing this and you don't know that, you have some homework to do about networking).  I have Ubiquiti Unifi ecosystem with UDMPro and Protect security cameras...etc.
   1. A [USR-TCP232-306](https://www.amazon.com/USR-TCP232-306-Serial-Ethernet-Device-Server/dp/B07G5P4CPR) IP to RS232 Network converter.
-  1. A [Male to Female DB9 serial cable](https://www.amazon.com/dp/B009WUQ828?psc=1&ref=ppx_yo2_dt_b_product_details).  MALE TO FEMALE if you purchase this particular model.  There are other models that have a Female RS232 Connector which would require a male to male cable instead.
+  1. A [Male to Female DB9 serial cable](https://www.amazon.com/dp/B009WUQ828?psc=1&ref=ppx_yo2_dt_b_product_details).  MALE TO FEMALE _if you purchase this particular converter_.  There are other models that have a Female RS232 Connector which would require a male to male cable instead.
 
 ## Configuration Instructions
 
 ### RS232 IP Converter
 
-The firmware version on the IP232 converter when I wrote this was V4018.  I don't beleive there is a way to flash it, nor is there a new version anywhere that I care to search for...since it's working as is.
+The firmware version on the IP232 converter when I wrote this was V4018.  The [usriot](https://www.usriot.com) website has all of the tools you need to configure and test this device, but they're not easy to understand if you don't know anything about them, like me.
 
-This particular converter came pre-configured with a 192.168.0.0/24 ip address.  Mine was 192.168.0.7.  Since I have a network that starts at 192.168.1.0/24, I had to manually configure my laptop's ip address to be on the same network as the IP converter before I was able to access the web interface to configure it.  But before you try to connect to this device, make sure you setup your router to assign a static IP address to your device's MAC address.
+This particular converter came pre-configured with a 192.168.0.0/24 ip address.  Mine was 192.168.0.7.  If you don't have the luxury of creating multiple networks, you may need to adjust your computer to be on the same network temporarily just so you can access the web interface of the device.  In my case, I was able to create another network for this device and was able to access the web interface even though my laptop is on the 192.168.1.0/24 network.
+
+!!! Note
+    With the exception of the web interface embedded on the device, all of the software tools designed to help you with this device are windows based.  If you don't have Windows, you could run a VM to use the tools, but you'll run into some challenges trying to detect the device.  The VM needs to be on the same network as the device.  I used VMWare on my Mac to run Windows and set the network settings to "Autodetect" under bridged settings.  It wasn't until I did this that I could use the USRIOT test tools to, at bare minimum, confirm that I could connect to the device.
+
+
 
 #### Preparing the Static IP Assignment
 
@@ -47,6 +52,7 @@ This particular converter came pre-configured with a 192.168.0.0/24 ip address. 
   1. To **reconnect to the device**, enter the IP address you assigned to the MAC Address from the previous section, step 3.  Remember, you wrote it down.
   1. Once you get back into the configuration site for the device, **click** the **Serial Port** item on the menu.
   1. For baud rate, **enter 9600**.  Data size = 8. Parity = None. Stop bits = 1.
+  1. Set the Work Mode to TCP Server.  That was the magic sauce that I was missing and didn't realize I had done before.
   1. The local port number should read 8235.  It can be whatever you want it to be, so go ham on it if you choose.  This is the port that you'll use when you setup the integration in Home Assistant.  I learned this the hard way after using port 80, like a moron.  To be fair, the first time I tried this Local Port Number, it didn't work.
   1. **Click** Save
 
@@ -54,10 +60,9 @@ There are no other settings I needed to configure in the converter to get it to 
 
 ### Home Assistant Configuration
 
-At the time of this writing: 
+At the time of this revision: 
 
-**Core Version - Core 2021.8.3**  
-**Supervisor Version - 2021.6.8** 
+**Core Version - Core 2022.5.1**  
 
   1. **Login** to your Home Assistant UI.
   1. **Navigate** to the **Configuration** page on the left menu.

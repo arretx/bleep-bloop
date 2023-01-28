@@ -13,9 +13,3 @@ Ultimately, the reason I'm doing this is because I'm _not_ a programmer and I _n
 
 In NodeRED, you can create arbitrary variables that store information based upon the messages that flow through the nodes.  You can store information in variables that are accessible by a single **node**, an entire **flow**, or **globally**, meaning the whole of NodeRED.
 
-### Examples
-
-I haven't found a use for **node** based variables yet, but I have found a use for variables accessible by **flows** and **global** variables.
-
-#### Flow Variables
-
